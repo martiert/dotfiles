@@ -1,0 +1,127 @@
+# Use Xft?
+use_xft yes
+#xftfont snap.se:size=6.5
+#xftfont Freemono:size=7:bold
+#xftfont cure.se:size=8
+xftfont Freesans:pixelsize=8
+xftalpha 1
+text_buffer_size 2048
+
+# Update interval in seconds
+update_interval 1
+
+# This is the number of times Conky will update before quitting.
+# Set to zero to run forever.
+total_run_times 0
+
+# Create own window instead of using desktop (required in nautilus)
+# own_window yes
+own_window_transparent yes
+own_window_type override
+#own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+# Use double buffering (reduces flicker, may not work for everyone)
+double_buffer yes
+
+# Minimum size of text area
+minimum_size 175
+maximum_width 250
+
+# Draw shades?
+draw_shades no
+
+# Draw outlines?
+draw_outline no
+
+# Draw borders around text
+draw_borders no
+
+# Stippled borders?
+stippled_borders 0
+
+# border margins
+#border_margin 5
+
+# border width
+border_width 1
+
+# Default colors and also border colors
+default_color e0e0e0
+#default_shade_color white
+#default_outline_color black
+#own_window_colour 000000
+
+# Text alignment, other possible values are commented
+#alignment top_left
+alignment top_left
+#alignment bottom_left
+#alignment bottom_right
+
+# Gap between borders of screen and text
+# same thing as passing -x at command line
+gap_x 35
+gap_y 175
+
+# Subtract file system buffers from used memory?
+no_buffers yes
+
+# set to yes if you want all text to be in uppercase
+uppercase no
+
+# number of cpu samples to average
+# set to 1 to disable averaging
+cpu_avg_samples 2
+
+# number of net samples to average
+# set to 1 to disable averaging
+net_avg_samples 2
+
+# Force UTF8? note that UTF8 support required XFT
+override_utf8_locale yes
+
+# Add spaces to keep things from moving about?  This only affects certain objects.
+use_spacer none
+
+TEXT
+
+DATE ${hr 1}
+${alignc}${font Freesans:pixelsize=12}${time %H:%M}${font}
+
+${alignc}${font Freesans:pixelsize=10}${time %a %d %b %Y}${font}
+
+SYS ${hr 1}
+
+Uptime: ${alignr}${uptime}
+Kernel:  ${alignr}${kernel}
+CPU: ${alignr}${exec cat /proc/cpuinfo | grep "model name" | cut -d ':' -f2|head -1}
+Core 1: ${alignr}${cpu cpu1}%  ${cpubar cpu1 4,60}
+Core 2: ${alignr}${cpu cpu2}%  ${cpubar cpu2 4,60}
+Core 3: ${alignr}${cpu cpu3}%  ${cpubar cpu3 4,60}
+Core 4: ${alignr}${cpu cpu4}%  ${cpubar cpu4 4,60}
+Core 5: ${alignr}${cpu cpu5}%  ${cpubar cpu5 4,60}
+Core 6: ${alignr}${cpu cpu6}%  ${cpubar cpu6 4,60}
+Core 7: ${alignr}${cpu cpu7}%  ${cpubar cpu7 4,60}
+Core 8: ${alignr}${cpu cpu8}%  ${cpubar cpu8 4,60}
+RAM: ${alignr}$memperc%  ${membar 4,60}
+
+HDD ${hr 1}
+
+Root:      ${alignc}${fs_used /}/${fs_size /} ${alignr}${fs_used_perc /}%  ${fs_bar 4,60 /}
+Home:      ${alignc}${fs_used /home}/${fs_size /home} ${alignr}${fs_used_perc /home}%  ${fs_bar 4,60 /home}
+Storage:   ${alignc}${fs_used /media/storage}/${fs_size /media/storage} ${alignr}${fs_used_perc /media/storage}%  ${fs_bar 4,60 /media/storage}
+
+NET ${hr 1}
+
+br0
+Down:   ${downspeed br0}/s ${alignr}${downspeedgraph br0 8,60 000000 000000}
+Up:     ${upspeed br0}/s ${alignr}${upspeedgraph br0 8,60 000000 000000}
+
+Downloaded: $alignr${totaldown br0}
+Uploaded: $alignr${totalup br0}
+
+enp3s0
+Down:   ${downspeed enp3s0}/s ${alignr}${downspeedgraph enp3s0 8,60 000000 000000}
+Up:     ${upspeed enp3s0}/s ${alignr}${upspeedgraph enp3s0 8,60 000000 000000}
+
+Downloaded: $alignr${totaldown enp3s0}
+Uploaded: $alignr${totalup enp3s0}

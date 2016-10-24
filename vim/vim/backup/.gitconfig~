@@ -1,0 +1,24 @@
+[user]
+    name = Martin Ertsaas
+    email = mertsas@cisco.com
+[sendmail]
+    smtpserver = outbound.cisco.com
+    smtpserverport = 25
+    smtpencryption = none
+    suppresscc=author
+[color]
+    status = auto
+    branch = auto
+    diff = auto
+    ui = auto
+[push]
+    default = simple
+[grep]
+    linenumber = true
+[diff]
+    renames = true
+[alias]
+    ctags = !.git/hooks/ctags
+[rerere]
+    enabled = true
+    autoupdate = true

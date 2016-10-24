@@ -1,0 +1,41 @@
+alternative_order text/plain text/html
+auto_view text/html application/html application/pdf application/msword application/word text/richtext application/rtf application/octet-stream application/vnd.ms-excel
+
+set ssl_starttls=yes
+set ssl_force_tls=yes
+unset imap_passive
+set imap_check_subscribed
+set mail_check=60
+set timeout=10
+set header_cache=~/.hcache
+set net_inc=5
+set pager=builtin
+set sort=threads
+set sort_aux=last-date-received
+set realname="Martin Ertsås"
+set query_command="lbdbq %s"
+set charset=utf-8
+set send_charset=utf-8
+set pager_index_lines=6
+
+set autoedit
+set edit_hdrs
+set hostname='cisco.com'
+set use_domain
+
+subscribe .*@mailman.rd.tandberg.com (tetris|.*[_-].*|group\..*)@cisco.com
+ignore *
+unignore from: subject to cc date x-mailer x-url user-agent
+unignore Delivery-date:
+unignore Resent-From:
+unignore X-Spam-Status:
+unignore X-Bogosity:
+unignore User-Agent:
+unignore X-Mailer:
+unignore X-Header
+unignore X-Mess
+unignore X-All-Senders
+
+source ~/.mutt/macros
+source ~/.mutt/colors
+source ~/.mutt/cisco

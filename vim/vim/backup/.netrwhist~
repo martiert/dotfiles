@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/usr/portage/dev-qt/qtgui'
+let g:netrw_dirhist_2='/home/martin/Programmering/Cisco/main/functional/xapi/definition/commands/carbon/_build/helmet-carbon-package/functional_helmet_carbon'
+let g:netrw_dirhist_3='/home/martin/Programmering/Cisco/main/functional/xapi/definition/commands/carbon/_build/helmet-carbon-package'
+let g:netrw_dirhist_4='/home/martin/Programmering/Cisco/main/functional/xapi/definition/commands/carbon/_build'
