@@ -1,0 +1,9 @@
+tags
+TODO
+upgrade_pkg.tmp
+.project
+.cproject
+compile_commands.json
+.ycm_extra_conf.py
+auth-key
+vgcore*

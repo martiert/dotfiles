@@ -1,0 +1,24 @@
+[include]
+    path = .gitconfig.local
+[core]
+    excludesfile = .gitignore
+[color]
+    status = auto
+    branch = auto
+    diff = auto
+    ui = auto
+[grep]
+    lineNumber = true
+[push]
+    default = simple
+[init]
+    templatedir = .git_template
+[diff]
+    renames = true
+[rerere]
+    enabled = true
+    autoupdate = true
+[hooks]
+    show-watching = true
+[gc]
+    auto = 0
