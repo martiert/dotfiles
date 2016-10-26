@@ -147,5 +147,4 @@ au BufRead,BufNewFile *.qml            setfiletype qml
 au BufRead,BufNewFile *.hla            setfiletype hla
 au BufRead,BufNewFile *.asm            setfiletype asmx86
 
-execute pathogen#infect()
 filetype plugin indent on
