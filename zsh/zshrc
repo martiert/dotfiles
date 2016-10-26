@@ -98,4 +98,4 @@ else
     gpg-agent --daemon --enable-ssh-support > $HOME/.gpg-agent-info
 fi
 
-[ -f "~/.zshrc_local" ] && source ~/.zshrc_local
+[ -f "~/.zshrc.local" ] && source ~/.zshrc.local
