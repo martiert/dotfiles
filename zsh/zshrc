@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/martin/.oh-my-zsh
+  export ZSH=${HOME}/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -53,8 +53,8 @@ plugins=(git virtualenv virtualenvwrapper python)
 
 # User configuration
 
-  export PATH="/home/martin/bin:/home/martin/.local/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/5.3.0:/opt/cuda/bin"
-  export KBUILD_OUTPUT="/home/martin/kernel_build"
+  export PATH="${HOME}/bin:${HOME}/.local/bin:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/5.3.0:/opt/cuda/bin"
+  export KBUILD_OUTPUT="${HOME}/kernel_build"
   export EDITOR="vim"
   export N_PREFIX="$HOME/.local"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -62,6 +62,7 @@ plugins=(git virtualenv virtualenvwrapper python)
 source $ZSH/oh-my-zsh.sh
 
 alias main='workon main'
+alias rdbuild='ssh rdbuild21 -l mertsas'
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -96,3 +97,5 @@ if [ -f "${HOME}/.gpg-agent-info" ]; then
 else
     gpg-agent --daemon --enable-ssh-support > $HOME/.gpg-agent-info
 fi
+
+[ -f "~/.zshrc_local" ] && source ~/.zshrc_local
