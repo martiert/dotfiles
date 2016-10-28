@@ -25,3 +25,6 @@
 [submodule "vim/vim/bundle/file-line"]
 	path = vim/vim/pack/plugins/start/file-line
 	url = https://github.com/bogado/file-line.git
+[submodule "vim/vim/pack/plugins/start/vim-unittest"]
+	path = vim/vim/pack/plugins/start/vim-unittest
+	url = https://github.com/h1mesuke/vim-unittest.git
