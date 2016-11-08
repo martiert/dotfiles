@@ -1,0 +1,130 @@
+! this are Xresources to make xterm look good
+! put into ~/.Xresources
+! after changing contents, run xrdb -merge .Xresources
+! gentoo has a bug so that it doesnt read it when X starts, so add above
+! command to /etc/xfce4/xinitrc (top) and be happy.
+
+xterm*font: -*-fixed-medium-r-*-*-14-*-*-*-*-*-iso8859-*
+xterm*font1: -*-*-*-*-*-*-2-*-*-*-*-*-*-*
+xterm*font2: -misc-fixed-*-r-normal-*-8-*-*-*-*-*-iso8859-*
+xterm*font3: -b&h-lucidatypewriter-bold-*-*-*-12-*-*-*-*-*-*-*
+xterm*font4: -*-screen-bold-r-normal-*-10-*-*-*-*-*-iso8859-*
+xterm*font5: -*-lucidatypewriter-medium-*-*-*-12-*-*-*-*-*-*-*
+xterm*font6: -*-lucidatypewriter-medium-*-*-*-24-*-*-*-*-*-*-*
+xterm*font7: -dec-terminal-bold-r-normal-*-14-*-*-*-*-*-iso8859-*
+
+UXTerm*eightBitInput: false
+XTerm*eightBitInput: false
+
+xterm*utf8: 1
+xterm*visualBell: false
+XTerm*loginShell: true
+XTerm*foreground: gray90
+XTerm*background: black
+XTerm*cursorColor: rgb:00/80/00
+XTerm*borderColor: white
+XTerm*scrollColor: black
+XTerm*visualBell: true
+XTerm*saveLines: 1000
+XTerm*allowSendEvents: True
+XTerm*sessionMgt: false
+XTerm*color0: black
+! XTerm*color1: red3
+! XTerm*color2: green3
+! XTerm*color3: yellow3
+! XTerm*color4: DodgerBlue1
+! XTerm*color5: magenta3
+! XTerm*color6: cyan3
+! XTerm*color7: gray90
+! XTerm*color8: gray50
+! XTerm*color9: red
+! XTerm*color10: green3
+! XTerm*color11: yellow
+XTerm*color12: #5fd7ff
+! XTerm*color13: magenta
+! XTerm*color14: cyan
+! XTerm*color15: white
+! XTerm*colorUL: yellow
+! XTerm*colorBD: white
+XTerm*rightScrollBar: false
+
+uxterm*font: -*-fixed-medium-r-*-*-14-*-*-*-*-*-iso8859-*
+uxterm*font1: -*-*-*-*-*-*-2-*-*-*-*-*-*-*
+uxterm*font2: -misc-fixed-*-r-normal-*-14-*-*-*-*-*-iso8859-*
+uxterm*font3: -b&h-lucidatypewriter-bold-*-*-*-16-*-*-*-*-*-*-*
+uxterm*font4: -*-screen-bold-r-normal-*-18-*-*-*-*-*-iso8859-*
+uxterm*font5: -*-lucidatypewriter-medium-*-*-*-16-*-*-*-*-*-*-*
+uxterm*font6: -*-lucidatypewriter-medium-*-*-*-24-*-*-*-*-*-*-*
+uxterm*font7: -dec-terminal-bold-r-normal-*-18-*-*-*-*-*-iso8859-*
+uxterm*utf8: 1
+uxterm*visualBell: false
+UXTerm*loginShell: true
+UXTerm*foreground: gray90
+UXTerm*background: black
+UXTerm*cursorColor: rgb:00/80/00
+UXTerm*borderColor: white
+UXTerm*scrollColor: black
+UXTerm*visualBell: true
+UXTerm*saveLines: 1000
+UXTerm*allowSendEvents: True
+UXTerm*sessionMgt: false
+UXTerm*color0: black
+UXTerm*color1: red3
+UXTerm*color2: green3
+UXTerm*color3: yellow3
+UXTerm*color4: DodgerBlue1
+UXTerm*color5: magenta3
+UXTerm*color6: cyan3
+UXTerm*color7: gray90
+UXTerm*color8: gray50
+UXTerm*color9: red
+UXTerm*color10: green3
+UXTerm*color11: yellow
+UXTerm*color12: blue
+UXTerm*color13: magenta
+UXTerm*color14: cyan
+UXTerm*color15: white
+UXTerm*colorUL: yellow
+UXTerm*colorBD: white
+UXTerm*rightScrollBar: false
+
+urxvt*font: -*-fixed-medium-r-*-*-14-*-*-*-*-*-iso8859-*
+urxvt*font1: -*-*-*-*-*-*-2-*-*-*-*-*-*-*
+urxvt*font2: -misc-fixed-*-r-normal-*-14-*-*-*-*-*-iso8859-*
+urxvt*font3: -b&h-lucidatypewriter-bold-*-*-*-16-*-*-*-*-*-*-*
+urxvt*font4: -*-screen-bold-r-normal-*-18-*-*-*-*-*-iso8859-*
+urxvt*font5: -*-lucidatypewriter-medium-*-*-*-16-*-*-*-*-*-*-*
+urxvt*font6: -*-lucidatypewriter-medium-*-*-*-24-*-*-*-*-*-*-*
+urxvt*font7: -dec-terminal-bold-r-normal-*-18-*-*-*-*-*-iso8859-*
+urxvt*utf8: 1
+urxvt*visualBell: false
+URxvt*loginShell: true
+URxvt*foreground: gray90
+URxvt*background: black
+URxvt*cursorColor: rgb:00/80/00
+URxvt*borderColor: black
+URxvt*scrollColor: black
+URxvt*visualBell: true
+URxvt*saveLines: 1000
+URxvt*allowSendEvents: True
+URxvt*sessionMgt: false
+URxvt*scrollBar: false
+URxvt*color0: black
+URxvt*color1: red3
+URxvt*color2: green3
+URxvt*color3: yellow3
+URxvt*color4: DodgerBlue1
+URxvt*color5: magenta3
+URxvt*color6: cyan3
+URxvt*color7: gray90
+URxvt*color8: gray50
+URxvt*color9: red
+URxvt*color10: green3
+URxvt*color11: yellow
+URxvt*color12: blue
+URxvt*color13: magenta
+URxvt*color14: cyan
+URxvt*color15: white
+URxvt*colorUL: yellow
+URxvt*colorBD: white
+URxvt*rightScrollBar: false
