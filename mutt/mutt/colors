@@ -1,0 +1,25 @@
+# patches
+color body green default "^diff \-.*"
+color body green default "^index [a-f0-9].*"
+color body green default "^\-\-\- .*"
+color body green default "^[\+]{3} .*"
+color body cyan default "^[\+][^\+]+.*"
+color body brightred  default "^\-[^\-]+.*"
+color body brightblue default "^@@ .*"
+
+color hdrdefault green default
+color quoted green black
+color signature green black
+color attachment red black
+color message brightred black
+color error brightred black
+color indicator cyan black
+color status white blue
+color tree green black
+color normal white black
+color markers red black
+color search white black
+color tilde brightmagenta black
+color index green black "~P"
+color index yellow black "~F"
+color index red black "~N|~O"

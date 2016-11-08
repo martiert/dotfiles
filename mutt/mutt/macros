@@ -1,0 +1,2 @@
+macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+macro index,pager ",m" ":unset wait_key\n |add_to_calcurse.sh<enter><exit>"
