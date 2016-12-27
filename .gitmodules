@@ -28,3 +28,9 @@
 [submodule "vim/vim/pack/plugins/start/vim-unittest"]
 	path = vim/vim/pack/plugins/start/vim-unittest
 	url = https://github.com/h1mesuke/vim-unittest.git
+[submodule "vim/vim/pack/plugins/start/vim-javascript"]
+	path = vim/vim/pack/plugins/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim-jsx"]
+	path = vim/vim/pack/plugins/start/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
