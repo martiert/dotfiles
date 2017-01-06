@@ -14,8 +14,8 @@
 ! xterm*font7: -dec-terminal-bold-r-normal-*-14-*-*-*-*-*-iso8859-*
 
 XTerm*eightBitInput: false
-XTerm*faceName: Liberation Mono
-XTerm*faceSize: 9
+XTerm*faceName: Terminus
+XTerm*faceSize: 10
 
 xterm*utf8: 1
 xterm*visualBell: false
