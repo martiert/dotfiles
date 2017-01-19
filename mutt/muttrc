@@ -1,5 +1,5 @@
 alternative_order text/calendar text/html text/plain text/*
-auto_view text/html text/calendar
+auto_view text/html text/calendar application/ics
 
 set ssl_starttls=yes
 set ssl_force_tls=yes
