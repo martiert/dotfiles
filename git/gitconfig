@@ -22,3 +22,5 @@
     show-watching = true
 [gc]
     auto = 0
+[alias]
+    lg = log --oneline --graph --decorate
