@@ -34,3 +34,9 @@
 [submodule "vim-jsx"]
 	path = vim/vim/pack/plugins/start/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
+[submodule "vim/vim/pack/plugins/start/vim-gradle"]
+	path = vim/vim/pack/plugins/start/vim-gradle
+	url = https://github.com/tfnico/vim-gradle.git
+[submodule "vim/vim/pack/plugins/start/javacomplete"]
+	path = vim/vim/pack/plugins/start/javacomplete
+	url = https://github.com/adragomir/javacomplete.git
