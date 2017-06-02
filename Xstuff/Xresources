@@ -16,6 +16,7 @@
 XTerm*eightBitInput: false
 XTerm*faceName: Terminus
 XTerm*faceSize: 10
+XTerm*locale: true
 
 xterm*utf8: 1
 xterm*visualBell: false
