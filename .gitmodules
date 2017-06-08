@@ -40,3 +40,6 @@
 [submodule "vim/vim/pack/plugins/start/javacomplete"]
 	path = vim/vim/pack/plugins/start/javacomplete
 	url = https://github.com/adragomir/javacomplete.git
+[submodule "vim/vim/pack/plugins/start/vim-javacomplete2"]
+	path = vim/vim/pack/plugins/start/vim-javacomplete2
+	url = https://github.com/artur-shaik/vim-javacomplete2.git
