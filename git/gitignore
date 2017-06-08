@@ -7,3 +7,4 @@ compile_commands.json
 .ycm_extra_conf.py
 auth-key
 vgcore*
+gradle/wrapper/gradle-wrapper.jar
