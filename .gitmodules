@@ -7,9 +7,6 @@
 [submodule "vim/vim/bundle/ctrlp.vim"]
 	path = vim/vim/pack/plugins/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim.git
-[submodule "vim/vim/bundle/syntastic"]
-	path = vim/vim/pack/plugins/start/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/vim/bundle/tcomment_vim"]
 	path = vim/vim/pack/plugins/start/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
