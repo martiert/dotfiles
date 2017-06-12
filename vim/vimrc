@@ -121,6 +121,8 @@ let g:flake8_warning_marker='WW'
 let g:syntastic_python_flake8_args='--ignore=E501'
 let g:syntastic_always_populate_loc_list = 1
 
+let delimitMate_expand_cr = 1
+
 autocmd Filetype c,cpp setlocal completefunc=RtagsCompleteFunc
 autocmd Filetype java setlocal completefunc=javacomplete#Complete
 autocmd Filetype java compiler gradle
