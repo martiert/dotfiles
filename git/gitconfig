@@ -1,5 +1,6 @@
-[include]
-    path = ~/.gitconfig.local
+[user]
+    name = Martin Ertsaas
+    email = martiert@gmail.com
 [core]
     excludesfile = ~/.gitignore
 [color]
@@ -24,3 +25,5 @@
     auto = 0
 [alias]
     lg = log --oneline --graph --decorate
+[include]
+    path = ~/.gitconfig.local
