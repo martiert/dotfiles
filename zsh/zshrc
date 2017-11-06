@@ -7,7 +7,7 @@ export WORKON_HOME=${HOME}/.virtualenvs
 
 plugins=(git virtualenv virtualenvwrapper python)
 
-export PATH="${HOME}/bin:${HOME}/.local/bin:$PATH:/opt/cuda/bin"
+export PATH="${HOME}/bin:${HOME}/.local/bin:$PATH"
 export KBUILD_OUTPUT="${HOME}/kernel_build"
 export EDITOR="vim"
 export N_PREFIX="$HOME/.local"

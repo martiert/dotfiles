@@ -8,3 +8,4 @@ compile_commands.json
 auth-key
 vgcore*
 gradle/wrapper/gradle-wrapper.jar
+.idea/vcs.xml

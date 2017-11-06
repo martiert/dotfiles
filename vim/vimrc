@@ -115,8 +115,6 @@ let delimitMate_expand_cr = 1
 
 autocmd Filetype c,cpp setlocal completefunc=RtagsCompleteFunc
 autocmd Filetype java setlocal completefunc=javacomplete#Complete
-autocmd Filetype java compiler gradle
-autocmd Filetype java map <leader>rj :call javacomplete#GoToDefinition()<CR>
 
 " Haskell
 let g:haddock_browser = "open"
