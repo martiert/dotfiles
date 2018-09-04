@@ -12,12 +12,14 @@ set header_cache=~/.hcache
 set net_inc=5
 set pager=builtin
 set sort=threads
-set sort_aux=last-date-received
 set query_command="lbdbq %s"
 set charset=utf-8
 set send_charset=utf-8
 set pager_index_lines=6
 set beep_new
+
+folder-hook . sort_aux=last-date-received
+folder-hook Patches sort_aux=subject
 
 set autoedit
 set edit_hdrs
