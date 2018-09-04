@@ -1,2 +1,3 @@
-macro pager \cb <pipe-entry>'urlview'<enter> 'Follow links with urlview'
+macro index,pager \cb "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 macro index,pager ",m" ":unset wait_key\n |add_to_calcurse.sh<enter><exit>"
