@@ -18,8 +18,6 @@ export N_PREFIX="$HOME/.local"
 
 source $ZSH/oh-my-zsh.sh
 
-alias rdbuild='ssh rdbuild21 -l mertsas'
-
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
