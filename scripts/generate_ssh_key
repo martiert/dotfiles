@@ -1,0 +1,167 @@
+#!/usr/bin/env python3
+
+import argparse
+import os
+import subprocess
+import pathlib
+
+from cryptography.hazmat.primitives import serialization as crypto_serialization
+from cryptography.hazmat.primitives.asymmetric import rsa
+from cryptography.hazmat.backends import default_backend as crypto_default_backend
+
+
+def read_file(config_file):
+    with config_file.open('r') as fd:
+        splitted = ''.join(fd.readlines()).strip().split('\n\n')
+
+    entries = {}
+    for entry in splitted:
+        lines = entry.split('\n')
+        map_entry = {}
+        for line in lines:
+            key, value = line.strip().split(' ')
+            map_entry[key.strip()] = value.strip()
+        host = map_entry['Host']
+        del map_entry['Host']
+        entries[host] = map_entry
+
+    return entries
+
+
+def write_file(content, config_file):
+    with config_file.open('w') as fd:
+        for host, entry in content.items():
+            fd.write('Host {}\n'.format(host))
+            for key, value in entry.items():
+                fd.write('  {} {}\n'.format(key, value))
+            fd.write('\n')
+
+
+def create_key_pair(server, directory):
+    key_dir = directory / server
+    key_dir.mkdir()
+
+    private = key_dir / 'id_rsa'
+    public = key_dir / 'id_rsa.pub'
+
+    key = rsa.generate_private_key(
+            backend=crypto_default_backend(),
+            public_exponent=65537,
+            key_size=2048)
+
+    private_key = key.private_bytes(
+            crypto_serialization.Encoding.PEM,
+            crypto_serialization.PrivateFormat.PKCS8,
+            crypto_serialization.NoEncryption())
+    public_key = key.public_key().public_bytes(
+            crypto_serialization.Encoding.OpenSSH,
+            crypto_serialization.PublicFormat.OpenSSH)
+
+    with private.open('wb') as fd:
+        fd.write(private_key)
+    private.chmod(0o600)
+
+    username = os.getlogin()
+    hostname = os.uname()[1]
+    keystring = '{} {}@{}'.format(public_key.decode('UTF-8'), username, hostname)
+    with public.open('w') as fd:
+        fd.write(keystring)
+
+
+def add_to_content(content, server, directory, arguments):
+    content[server] = {
+            'IdentityFile': directory / server / 'id_rsa',
+            }
+    if arguments.user:
+        content[server]['User'] = arguments.user
+    if arguments.hostname:
+        content[server]['HostName'] = arguments.hostname
+
+
+def create_key(content, server, directory, arguments):
+    create_key_pair(server, directory)
+    add_to_content(content, server, directory, arguments)
+
+
+def remove_key(content, server, directory, remove_remote):
+    if server not in content:
+        return
+
+    if remove_remote:
+        username = os.getlogin()
+        hostname = os.uname()[1]
+        subprocess.check_call([
+            'ssh',
+            server,
+            'sed -i /{}@{}/d'.format(username, hostname),
+            '.ssh/authorized_keys'])
+
+    server_dir = directory / server
+    for f in server_dir.iterdir():
+        f.unlink()
+    server_dir.rmdir()
+    del content[server]
+
+
+def copy_key(server, directory, arguments):
+    hostname = arguments.hostname if arguments.hostname else server
+    if arguments.user:
+        hostname = '{}@{}'.format(arguments.user, hostname)
+
+    subprocess.check_output(
+            ['ssh-copy-id',
+             '-i', str(directory/server/'id_rsa'),
+             hostname])
+
+
+def update_ssh(content, server, directory, arguments):
+    if arguments.remove or arguments.remove_remote:
+        remove_key(content, server, directory, arguments.remove_remote)
+    else:
+        create_key(content, server, directory, arguments)
+        if not arguments.no_copy:
+            copy_key(server, directory, arguments)
+
+
+def main():
+    default_ssh_directory = '{}/.ssh'.format(os.path.expanduser('~'))
+
+    parser = argparse.ArgumentParser('Generate ssh key pair for a given server')
+    parser.add_argument(
+            '--remove',
+            '-r',
+            action='store_true',
+            help='Remove selected key')
+    parser.add_argument(
+            '--remove-remote',
+            action='store_true',
+            help='Remove remote key as well as generated')
+    parser.add_argument(
+            '--no-copy',
+            action='store_true',
+            help='Do not copy key to remote')
+    parser.add_argument(
+            '--user',
+            '-u',
+            help='Username to use for the key')
+    parser.add_argument(
+            '--hostname',
+            help='Hostname alias')
+    parser.add_argument(
+            '--directory',
+            '-d',
+            default=default_ssh_directory,
+            help='The ssh directory')
+    parser.add_argument('server', help='Server to create ssh key for')
+
+    arguments = parser.parse_args()
+
+    directory = pathlib.Path(arguments.directory)
+    config_file = directory / 'config'
+
+    content = read_file(config_file)
+    update_ssh(content, arguments.server, directory, arguments)
+    write_file(content, config_file)
+
+if __name__ == '__main__':
+    main()
