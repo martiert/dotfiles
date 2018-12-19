@@ -12,30 +12,33 @@ FILES=zsh/zshrc \
 
 
 .PHONY: all
-all: clean scripts dotfiles
+all: scripts dotfiles
 
 
 .PHONY: scripts
 scripts:
 	for file in $(shell find $(CURDIR)/scripts -type f); do \
-	    f=$$(basename $$file); \
-	    ln -sf $$file ~/.local/bin/$$f; \
+	    f=~/.local/bin/$$(basename $$file); \
+	    ln -sf $(CURDIR)/$$file $$f; \
 	done
 
 .PHONY: dotfiles
 dotfiles:
 	for file in $(FILES); do \
-	    f=$$(basename $$file); \
-	    ln -s "$(CURDIR)/$$file" ~/.$$f; \
+	    f=~/.$$(basename $$file); \
+	    ln -sf $(CURDIR)/$$file $$f; \
 	done
-	mkdir ~/.vim/tmp
+	if [ ! -d ~/.vim/tmp ]; then \
+	    rm -fr ~/.vim/tmp; \
+	    mkdir ~/.vim/tmp; \
+	fi
 
 
 .PHONY: clean_scripts
 clean_scripts:
 	for file in $(shell find $(CURDIR)/scripts -type f); do \
 	    f=$$(basename $$file); \
-	    rm ~/.local/bin/$$f; \
+	    [ -L ~/.local/bin/$$f ] && rm ~/.local/bin/$$f; \
 	done
 
 .PHONY: clean_dotfiles
@@ -43,8 +46,9 @@ clean_dotfiles:
 	rm -fr ~/.vim/tmp
 	for file in $(FILES); do \
 	    f=$$(basename $$file); \
-	    rm ~/.$$f; \
+	    [ -L ~/.$$f ] && rm ~/.$$f; \
 	done
+
 
 .PHONY: clean
 clean: clean_scripts clean_dotfiles
