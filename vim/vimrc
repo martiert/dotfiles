@@ -136,6 +136,8 @@ au BufNewFile,BufRead genmake.def       setfiletype python
 
 " Adding QML syntax highlight
 au BufRead,BufNewFile *.qml            setfiletype qml
+au BufRead,BufNewFile *.json           setlocal shiftwidth=2
+au BufRead,BufNewFile *.json           setlocal tabstop=2
 
 " Adding asm syntax
 au BufRead,BufNewFile *.hla            setfiletype hla
