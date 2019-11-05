@@ -19,7 +19,7 @@ def read_file(config_file):
         lines = entry.split('\n')
         map_entry = {}
         for line in lines:
-            key, value = line.strip().split(' ')
+            key, value = line.strip().split(' ', 1)
             map_entry[key.strip()] = value.strip()
         host = map_entry['Host']
         del map_entry['Host']
