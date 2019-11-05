@@ -43,3 +43,6 @@
 [submodule "vim/vim/pack/plugins/start/delimitMate"]
 	path = vim/vim/pack/plugins/start/delimitMate
 	url = https://github.com/Raimondi/delimitMate.git
+[submodule "thirdparty/peda"]
+	path = thirdparty/peda
+	url = https://github.com/longld/peda.git
