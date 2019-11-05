@@ -16,6 +16,7 @@ export KBUILD_OUTPUT="${HOME}/kernel_build"
 export EDITOR="vim"
 export N_PREFIX="$HOME/.local"
 export GOPATH="$HOME/.local"
+export MANPATH="$HOME/.local/share/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
