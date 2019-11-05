@@ -36,6 +36,7 @@ thirdparty:
 dotfiles:
 	for file in $(FILES); do \
 	    f=~/.$$(basename $$file); \
+	    [ -L "$$f" ] && rm "$$f"; \
 	    ln -sf $(CURDIR)/$$file $$f; \
 	done
 	if [ ! -d ~/.vim/tmp ]; then \
