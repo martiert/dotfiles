@@ -19,7 +19,7 @@ all: scripts dotfiles
 scripts:
 	for file in $(shell find $(CURDIR)/scripts -type f); do \
 	    f=~/.local/bin/$$(basename $$file); \
-	    ln -sf $(CURDIR)/$$file $$f; \
+	    ln -sf $$file $$f; \
 	done
 
 .PHONY: dotfiles
