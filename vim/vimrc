@@ -95,7 +95,7 @@ nmap <Leader>bb :CtrlPBookmarkDir<Return>
 let g:ctrlp_extensions = [                                       
             \ 'tag', 'buffertag', 'quickfix',                    
             \ 'line', 'mixed', 'bookmarkdir']                    
-let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }           
+" let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }           
 let g:ctrlp_open_new_file = 't'                                  
 let g:ctrlp_root_markers = ['.ctrlp']                            
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
@@ -145,6 +145,6 @@ au BufRead,BufNewFile *.asm            setfiletype asmx86
 
 filetype plugin indent on
 
-autocmd FileType javascript,html,xml setlocal shiftwidth=2 softtabstop=2
+autocmd FileType javascript,html,xml,tex setlocal shiftwidth=1 softtabstop=2
 
 let g:jsx_ext_required = 0
