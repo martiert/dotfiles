@@ -4,6 +4,7 @@ FILES=zsh/zshrc \
       Xstuff/Xresources \
       mutt/mutt \
       mutt/muttrc \
+      gdb/gdbinit \
       git/gitconfig \
       git/gitignore \
       fluxbox \
@@ -41,7 +42,6 @@ dotfiles:
 	    rm -fr ~/.vim/tmp; \
 	    mkdir ~/.vim/tmp; \
 	fi
-
 
 .PHONY: clean_scripts
 clean_scripts:
