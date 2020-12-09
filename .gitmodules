@@ -46,3 +46,15 @@
 [submodule "thirdparty/peda"]
 	path = thirdparty/peda
 	url = https://github.com/longld/peda.git
+[submodule "vim/vim/pack/plugins/start/vim-orgmode"]
+	path = vim/vim/pack/plugins/start/vim-orgmode
+	url = https://github.com/jceb/vim-orgmode.git
+[submodule "vim/vim/pack/plugins/start/calendar-vim"]
+	path = vim/vim/pack/plugins/start/calendar-vim
+	url = https://github.com/mattn/calendar-vim
+[submodule "ale"]
+	path = vim/vim/pack/plugins/start/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "vim/vim/pack/plugins/start/YouCompleteMe"]
+	path = vim/vim/pack/plugins/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git

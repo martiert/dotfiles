@@ -113,7 +113,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 
 let delimitMate_expand_cr = 1
 
-autocmd Filetype c,cpp setlocal completefunc=RtagsCompleteFunc
+" autocmd Filetype c,cpp setlocal completefunc=RtagsCompleteFunc
 autocmd Filetype java setlocal completefunc=javacomplete#Complete
 
 " Haskell
@@ -138,6 +138,8 @@ au BufNewFile,BufRead genmake.def       setfiletype python
 au BufRead,BufNewFile *.qml            setfiletype qml
 au BufRead,BufNewFile *.json           setlocal shiftwidth=2
 au BufRead,BufNewFile *.json           setlocal tabstop=2
+au BufRead,BufNewFile *.js             setlocal shiftwidth=2
+au BufRead,BufNewFile *.js             setlocal tabstop=2
 
 " Adding asm syntax
 au BufRead,BufNewFile *.hla            setfiletype hla
@@ -148,3 +150,12 @@ filetype plugin indent on
 autocmd FileType javascript,html,xml,tex setlocal shiftwidth=1 softtabstop=2
 
 let g:jsx_ext_required = 0
+
+nn <silent> <C-d>       :YcmCompleter GoToDefinition<cr>
+nn <silent> <C-r>       :YcmCompleter GoToReferences<cr>
+nn <silent> <C-t>       :YcmCompleter GetType<cr>
+nn <silent> xp          :YcmCompleter GetParent<cr>
+nn <silent> xf          :YcmCompleter FixIt<cr>
+
+let g:ycm_clangd_uses_ycmd_caching = 0
+let g:ycm_clangd_binary_path = exepath('clangd')
