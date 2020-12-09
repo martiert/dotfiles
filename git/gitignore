@@ -9,3 +9,4 @@ auth-key
 vgcore*
 gradle/wrapper/gradle-wrapper.jar
 .idea/vcs.xml
+.cache/
