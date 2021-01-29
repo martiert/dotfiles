@@ -6,7 +6,7 @@
 	url = https://github.com/JazzCore/ctrlp-cmatcher.git
 [submodule "vim/vim/bundle/ctrlp.vim"]
 	path = vim/vim/pack/plugins/start/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "vim/vim/bundle/tcomment_vim"]
 	path = vim/vim/pack/plugins/start/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim.git
@@ -15,7 +15,7 @@
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/vim/bundle/vim-latex"]
 	path = vim/vim/pack/plugins/start/vim-latex
-	url = https://github.com/lervag/vim-latex.git
+	url = https://github.com/vim-latex/vim-latex.git
 [submodule "vim/vim/bundle/vim-rtags"]
 	path = vim/vim/pack/plugins/start/vim-rtags
 	url = https://github.com/lyuts/vim-rtags.git
