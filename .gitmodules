@@ -1,9 +1,6 @@
 [submodule "vim/vim/bundle/Colour-Sampler-Pack"]
 	path = vim/vim/pack/plugins/start/Colour-Sampler-Pack
 	url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
-[submodule "vim/vim/bundle/ctrlp-cmatcher"]
-	path = vim/vim/pack/plugins/start/ctrlp-cmatcher
-	url = https://github.com/JazzCore/ctrlp-cmatcher.git
 [submodule "vim/vim/bundle/ctrlp.vim"]
 	path = vim/vim/pack/plugins/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
@@ -25,24 +22,6 @@
 [submodule "vim/vim/pack/plugins/start/vim-unittest"]
 	path = vim/vim/pack/plugins/start/vim-unittest
 	url = https://github.com/h1mesuke/vim-unittest.git
-[submodule "vim/vim/pack/plugins/start/vim-javascript"]
-	path = vim/vim/pack/plugins/start/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule "vim-jsx"]
-	path = vim/vim/pack/plugins/start/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
-[submodule "vim/vim/pack/plugins/start/vim-gradle"]
-	path = vim/vim/pack/plugins/start/vim-gradle
-	url = https://github.com/tfnico/vim-gradle.git
-[submodule "vim/vim/pack/plugins/start/javacomplete"]
-	path = vim/vim/pack/plugins/start/javacomplete
-	url = https://github.com/adragomir/javacomplete.git
-[submodule "vim/vim/pack/plugins/start/vim-javacomplete2"]
-	path = vim/vim/pack/plugins/start/vim-javacomplete2
-	url = https://github.com/artur-shaik/vim-javacomplete2.git
-[submodule "vim/vim/pack/plugins/start/delimitMate"]
-	path = vim/vim/pack/plugins/start/delimitMate
-	url = https://github.com/Raimondi/delimitMate.git
 [submodule "thirdparty/peda"]
 	path = thirdparty/peda
 	url = https://github.com/longld/peda.git
