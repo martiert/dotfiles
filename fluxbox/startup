@@ -20,9 +20,4 @@ xmodmap "/home/martin/.Xmodmap"
 
 xscreensaver -no-splash &
 xrdb ~/.Xresources
-if [ ! -f /tmp/rdm.lock ]; then
-    touch /tmp/rdm.lock
-    rdm --daemon -j 20 --log-file ~/.rdm.log
-fi
-
 exec fluxbox -log "/home/martin/.fluxbox/log"
