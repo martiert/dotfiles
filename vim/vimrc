@@ -149,7 +149,10 @@ filetype plugin indent on
 
 autocmd FileType javascript,html,xml,tex setlocal shiftwidth=2 softtabstop=2
 
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
+
+let g:rainbow_active = 1
+let g:rainbow_ctermfgs = ['darkcyan', 'darkgreen', 'darkyellow', 'darkred', 'darkmagenta', 'darkcyan']
 
 nn <silent> <C-d>       :YcmCompleter GoToDefinition<cr>
 nn <silent> <C-r>       :YcmCompleter GoToReferences<cr>

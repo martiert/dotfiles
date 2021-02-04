@@ -43,3 +43,6 @@
 [submodule "vim/vim/pack/plugins/start/patchreview-vim"]
 	path = vim/vim/pack/plugins/start/patchreview-vim
 	url = https://github.com/junkblocker/patchreview-vim.git
+[submodule "vim/vim/pack/plugins/start/vim-rainbow"]
+	path = vim/vim/pack/plugins/start/vim-rainbow
+	url = https://github.com/frazrepo/vim-rainbow.git
