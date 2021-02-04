@@ -1,5 +1,6 @@
 *.swp
 vim/vim/.netrwhist
 vim/vim/.VimballRecord
+vim/vim/tmp
 fluxbox/fbrun_history
 fluxbox/*log
