@@ -147,7 +147,7 @@ au BufRead,BufNewFile *.asm            setfiletype asmx86
 
 filetype plugin indent on
 
-autocmd FileType javascript,html,xml,tex setlocal shiftwidth=1 softtabstop=2
+autocmd FileType javascript,html,xml,tex setlocal shiftwidth=2 softtabstop=2
 
 let g:jsx_ext_required = 0
 
