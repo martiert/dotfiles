@@ -40,3 +40,6 @@
 [submodule "vim/vim/pack/plugins/start/cpsm"]
 	path = vim/vim/pack/plugins/start/cpsm
 	url = https://github.com/nixprime/cpsm.git
+[submodule "vim/vim/pack/plugins/start/patchreview-vim"]
+	path = vim/vim/pack/plugins/start/patchreview-vim
+	url = https://github.com/junkblocker/patchreview-vim.git
