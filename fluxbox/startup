@@ -18,6 +18,14 @@ xmodmap "/home/martin/.Xmodmap"
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
 
+xcompmgr &
 xscreensaver -no-splash &
 xrdb ~/.Xresources
+xsetwacom --set "Wacom Intuos PT M 2 Pen stylus" MapToOutput HEAD-0
+xsetwacom --set "Wacom Intuos PT M 2 Pad pad" MapToOutput HEAD-0
+xsetwacom --set "Wacom Intuos PT M 2 Finger touch" MapToOutput HEAD-0
+xsetwacom --set "Wacom Intuos PT M 2 Pad pad" Button 1 key "p"
+xsetwacom --set "Wacom Intuos PT M 2 Pad pad" Button 3 key "a"
+xsetwacom --set "Wacom Intuos PT M 2 Pad pad" Button 8 key "Shift_L" "e"
+xsetwacom --set "Wacom Intuos PT M 2 Pad pad" Button 9 key "n"
 exec fluxbox -log "/home/martin/.fluxbox/log"

@@ -9,9 +9,9 @@ ZSH_THEME="bira"
 CASE_SENSITIVE="true"
 export WORKON_HOME=${HOME}/.virtualenvs
 
-plugins=(git virtualenv virtualenvwrapper python)
+plugins=(git python)
 
-export PATH="${HOME}/bin:${HOME}/.local/bin:$PATH"
+export PATH="${HOME}/.local/bin:$PATH"
 export KBUILD_OUTPUT="${HOME}/kernel_build"
 export EDITOR="vim"
 export N_PREFIX="$HOME/.local"

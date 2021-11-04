@@ -10,3 +10,6 @@ vgcore*
 gradle/wrapper/gradle-wrapper.jar
 .idea/vcs.xml
 .cache/
+.envrc
+.ccls-cache
+shell.nix
